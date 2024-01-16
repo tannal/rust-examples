@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package example;
+
+message HelloRequest {
+    required string name = 1;
+}
+
+message HelloResponse {
+    required string message = 1;
+}

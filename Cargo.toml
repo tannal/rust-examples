@@ -1,0 +1,34 @@
+[package]
+name = "rust-examples"
+version = "0.1.0"
+edition = "2021"
+[workspace]
+
+# List of members in the workspace
+members = [ "procedure_macro",
+    "python-call-rust",
+]
+
+# (Optional) Exclude certain directories
+exclude = [
+    "examples",
+    "tests",
+    # ...
+]
+
+# (Optional) Workspace-wide configuration
+[profile.release]
+opt-level = 3
+
+# ... other workspace-wide settings ...
+
+
+[lib]
+name = "word_counter"
+crate-type = ["cdylib"]
+proc_macro = true
+
+
+[dependencies]
+protobuf = "3.3.0"
+tonic = "0.10.2"
