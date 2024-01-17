@@ -5,7 +5,8 @@ edition = "2021"
 [workspace]
 
 # List of members in the workspace
-members = [ "procedure_macro",
+members = [ 
+    "procedure_macro",
     "python-call-rust",
 ]
 
@@ -21,12 +22,6 @@ exclude = [
 opt-level = 3
 
 # ... other workspace-wide settings ...
-
-
-[lib]
-name = "word_counter"
-crate-type = ["cdylib"]
-proc_macro = true
 
 
 [dependencies]
